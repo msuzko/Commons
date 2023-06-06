@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package com.mec.dictionary;
+
+option java_multiple_files = true;
+option java_package = "com.mec.proto.dictionary";
+
+service DictionaryService {
+  rpc getCost(InstrumentRq) returns (InstrumentRs);
+}
+
+message InstrumentRq {
+  string ticker = 1;
+}
+
+message InstrumentRs {
+  string ticker = 1;
+  double price = 2;
+}
