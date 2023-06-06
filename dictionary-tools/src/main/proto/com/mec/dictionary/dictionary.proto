@@ -16,4 +16,5 @@ message InstrumentRq {
 message InstrumentRs {
   string ticker = 1;
   double price = 2;
+
 }
